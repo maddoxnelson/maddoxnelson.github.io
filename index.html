@@ -1,1 +1,16 @@
-Hello world!
+---
+layout: default
+title: Matt's blog
+---
+
+<h1>{{ page.title }}</h1>
+
+{% for post in site.posts %}
+
+	<div class="{{ post.class }}">
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	    <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
+	    <div class="blurb">{{ post.blurb }}</div>
+	</div>
+
+{% endfor %}
